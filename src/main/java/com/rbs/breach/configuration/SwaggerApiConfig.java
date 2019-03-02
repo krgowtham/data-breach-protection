@@ -25,6 +25,6 @@ public class SwaggerApiConfig {
 	public Docket api() {
 		return new Docket(DocumentationType.SWAGGER_2).select()
 				.apis(RequestHandlerSelectors.basePackage("com.rbs.breach"))
-				.paths(PathSelectors.ant("/foos/*")).build();
+				.paths(PathSelectors.ant("/*")).build();
 	}
 }
