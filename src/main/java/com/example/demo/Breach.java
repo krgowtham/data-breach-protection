@@ -32,4 +32,5 @@ public class Breach {
 	private String customerName;
 	private String typeOfInformation;
 	private String riskProfile;
+	private User user;
 }
