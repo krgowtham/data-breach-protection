@@ -5,10 +5,18 @@ import java.util.Iterator;
 import java.util.List;
 
 import org.assertj.core.util.Arrays;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.rbs.breach.entity.Franchise;
+import com.rbs.breach.entity.RiskProfiles;
+import com.rbs.breach.repository.RiskProfileRepository;
 
 @Service
 public class RiskProfileService {
+	
+	@Autowired
+	RiskProfileRepository profileRepository;
 
 	public List<String> getRiskProfileList(){
 		
@@ -43,5 +51,10 @@ public class RiskProfileService {
 			}
 		}
 		return "";
+	}
+	
+	public String checkRiskProfileDetails(Franchise franchise, String businessArea, String breachCategory){
+		RiskProfiles riskProfile = profileRepository.findByFranchiseAndBusinessAreaAndBreachCatgeory(franchise, businessArea, breachCategory);
+		return riskProfile.getRiskStatus();
 	}
 }

@@ -20,10 +20,14 @@ public class BreachService implements IBreachService {
 
 	@Autowired
 	BreachApplicationRepository repository;
+	
+	@Autowired 
+	RiskProfileService riskProfileService;
 
 	@Override
 	public BreachApplication save(BreachApplication application) {
-		RiskProfile riskProfile = validate(application.getFranchise(), application.getBusinessArea(),
+		RiskProfile riskProfile = riskProfileService.checkRiskProfileDetails(application.getFranchise(),
+				application.getBusinessArea(),
 				application.getCategory());
 		application.setRiskProfile(riskProfile);
 		repository.save(application);
