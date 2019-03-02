@@ -4,6 +4,7 @@
 package com.rbs.breach.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,9 +22,15 @@ public class BreachController {
 	@Autowired
 	IBreachService breachService;
 	
-	@PostMapping("/save")
-	public RiskProfile saveBreachApplicationForm(@RequestBody Breach breach) {
-		
-		
+	@GetMapping
+	public String add() {
+		return "" + 1+2;
 	}
+	
+	
+//	@PostMapping("/save")
+//	public RiskProfile saveBreachApplicationForm(@RequestBody Breach breach) {
+//		
+//		
+//	}
 }
