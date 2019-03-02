@@ -13,6 +13,10 @@ public enum Franchise {
     private Franchise(String value) {
         this.value = value;
     }
+    
+    public String getValue() {
+		return value;
+	}
 
 	public static Franchise codeToObject(String franchise) {
 		switch (franchise) {
@@ -28,6 +32,6 @@ public enum Franchise {
 	}
 
 	public static String valueToCode(Franchise franchise) {
-		return null;
+		return franchise.getValue();
 	}
 }
