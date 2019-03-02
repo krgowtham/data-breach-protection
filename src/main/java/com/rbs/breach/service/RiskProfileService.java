@@ -21,17 +21,17 @@ public class RiskProfileService {
 	public List<String> getRiskProfileList(){
 		
 		List<String> riskProfileList = new ArrayList<String>();
-		riskProfileList.add("Private banking|Customer Experience|Loss of device/physical files |High");
-		riskProfileList.add("Private banking|Customer Experience|PIN/Card Issues |High");
-		riskProfileList.add("RBSI|Customer Experience|Loss of device/physical files |High");
-		riskProfileList.add("RBSI|Customer Experience|PIN/Card Issues |High");
-		riskProfileList.add("RBSI|Risk|PIN/Card Issues|High");
-		riskProfileList.add("RBSI|Finance|Loss of device/physical files |High");
-		riskProfileList.add("Services|Information found by a third party /member of publis becuase it was left in an insecure|High");
-		riskProfileList.add("Services|Payments|Loss of device/physical files |High");
-		riskProfileList.add("Services|Payments|PIN/Card Issues|Medium");
-		riskProfileList.add("RBSI|Personal and Business Banking||Medium");
-		riskProfileList.add("Private banking|Business Banking|Loss of device/physical files |Medium");
+		riskProfileList.add("Private banking|Customer Experience|Loss of device/physical files |HIGH");
+		riskProfileList.add("Private banking|Customer Experience|PIN/Card Issues |HIGH");
+		riskProfileList.add("RBSI|Customer Experience|Loss of device/physical files |HIGH");
+		riskProfileList.add("RBSI|Customer Experience|PIN/Card Issues |HIGH");
+		riskProfileList.add("RBSI|Risk|PIN/Card Issues|HIGH");
+		riskProfileList.add("RBSI|Finance|Loss of device/physical files |HIGH");
+		riskProfileList.add("Services|Information found by a third party /member of publis becuase it was left in an insecure|HIGH");
+		riskProfileList.add("Services|Payments|Loss of device/physical files |HIGH");
+		riskProfileList.add("Services|Payments|PIN/Card Issues|MEDIUM");
+		riskProfileList.add("RBSI|Personal and Business Banking||MEDIUM");
+		riskProfileList.add("Private banking|Business Banking|Loss of device/physical files |MEDIUM");
 		
 		return riskProfileList;
 		

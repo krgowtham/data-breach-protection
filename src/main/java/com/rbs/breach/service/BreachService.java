@@ -26,10 +26,11 @@ public class BreachService implements IBreachService {
 
 	@Override
 	public BreachApplication save(BreachApplication application) {
-		RiskProfile riskProfile = riskProfileService.checkRiskProfileDetails(application.getFranchise(),
+		String riskProfile = riskProfileService.checkRiskProfileDetails(application.getFranchise(),
 				application.getBusinessArea(),
 				application.getCategory());
-		application.setRiskProfile(riskProfile);
+		
+		application.setRiskProfile(RiskProfile.valueOf(riskProfile));
 		repository.save(application);
 		return application;
 	}
