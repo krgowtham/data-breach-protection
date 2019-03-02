@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
@@ -19,6 +20,7 @@ public class BreachDataApplication {
 		SpringApplication.run(BreachDataApplication.class, args);
 	}
 
+	@Autowired
 	RiskProfileRepository riskProfileRepository;
 	
 	@EventListener(ApplicationReadyEvent.class)
